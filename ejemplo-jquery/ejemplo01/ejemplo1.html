@@ -4,24 +4,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Demo Jquery</title>
-  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   </head>
   <body>
       <h1>Ejemplo de Uso de Jquery</h1>
-      <h3 id="nombreCarrera">Tecnologías de la Información</h3>
+      <h2>Vicente Valdivieso</h2>
+      <h3 id="nombreCarrera">Computación</h3>
+      <h3 id="cicloAcademico">6to Ciclo</h3>
       <h3 id="nombreUniversidad">Universidad Técnica Particular de Loja</h3>
       <button type="submit">Generar Mensaje</button>
-      <p id="mensajeFinal">
-      </p>
+      <p id="mensajeFinal"></p>
   </body>
   <script>
     $(document).ready(function() {
-      $( "button" ).click(function() {
+      $("button").click(function() {
         var texto1 = $('#nombreCarrera').text();
         var texto2 = $('#nombreUniversidad').text();
-        $('#mensajeFinal').text("Su carrera es: "+ texto1 + ". Su universidad es: "
-          + texto2);
-        console.log(texto1);
+        var texto3 = $('#cicloAcademico').text();
+        $('#mensajeFinal').text("Su carrera es: " + texto1 + ". Su universidad es: " +
+          texto2 + " y esta en " + texto3 + ".");
+        console.log(texto1, texto2, texto3);
       });
     });
   </script>
